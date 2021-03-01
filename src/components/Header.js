@@ -52,6 +52,7 @@ const HeaderLeft = styled.div`
     margin-right: 30px;
   }
 `;
+
 const HeaderAvatar = styled(Avatar)`
   cursor: pointer;
 
@@ -59,6 +60,7 @@ const HeaderAvatar = styled(Avatar)`
     opacity: 0.8;
   }
 `;
+
 const HeaderSearch = styled.div`
   flex: 0.4;
   opacity: 1;
@@ -79,6 +81,7 @@ const HeaderSearch = styled.div`
     color: white;
   }
 `;
+
 const HeaderRight = styled.div`
   flex: 0.3;
   display: flex;
