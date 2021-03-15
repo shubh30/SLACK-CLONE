@@ -21,7 +21,6 @@ import { db } from "../firebase";
 
 function SideBar() {
   const [channels, loading, error] = useCollection(db.collection("rooms"));
-  console.log("Data", channels?.docs );
 
   return (
     <SideBarContainer>
