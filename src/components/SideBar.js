@@ -7,7 +7,7 @@ import SidebarOption from "./SidebarOption";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 import CreateIcon from "@material-ui/icons/Create";
 import InsertCommentIcon from "@material-ui/icons/InsertComment";
-import InboxIcon from "@material-ui/icons/Inbox";
+import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
 import DraftsIcon from "@material-ui/icons/Drafts";
 import BookmarkBorderIcon from "@material-ui/icons/BookmarkBorder";
 import FileCopyIcon from "@material-ui/icons/FileCopy";
@@ -36,7 +36,7 @@ function SideBar() {
       </SideBarHeader>
 
       <SidebarOption Icon={InsertCommentIcon} title="Threads" />
-      <SidebarOption Icon={InboxIcon} title="Mentions & Reactions" />
+      <SidebarOption Icon={AlternateEmailIcon} title="Mentions & Reactions" />
       <SidebarOption Icon={DraftsIcon} title="Saved Items" />
       <SidebarOption Icon={BookmarkBorderIcon} title="Channel browser" />
       <SidebarOption Icon={FileCopyIcon} title="File Browser" />
@@ -49,11 +49,7 @@ function SideBar() {
       <SidebarOption Icon={AddIcon} addChannelOption title="Add Channels" />
 
       {channels?.docs.map((doc) => (
-        <SidebarOption
-          key={doc.id}
-          id={doc.id}
-          title={doc.data().name}
-        />
+        <SidebarOption key={doc.id} id={doc.id} title={doc.data().name} />
       ))}
     </SideBarContainer>
   );
