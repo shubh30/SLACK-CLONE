@@ -17,19 +17,21 @@ import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import AddIcon from "@material-ui/icons/Add";
 import { useCollection } from "react-firebase-hooks/firestore";
-import { db } from "../firebase";
+import { auth, db } from "../firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 function SideBar() {
   const [channels, loading, error] = useCollection(db.collection("rooms"));
+  const [user] = useAuthState(auth);
 
   return (
     <SideBarContainer>
       <SideBarHeader>
         <SideBarInfo>
-          <h2>Shubham Nagpal</h2>
+          <h2>SLACK-CLONE</h2>
           <h3>
             <FiberManualRecordIcon />
-            Shubham Nagpal
+            {user?.displayName}
           </h3>
         </SideBarInfo>
         <CreateIcon />
